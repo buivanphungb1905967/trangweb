@@ -27,7 +27,7 @@
 </head>
 <body>
 	
-	<img class="giay-full" src="img/a_0.png" alt="">
+	<img class="giay-full" src="img/logo.jpg" alt="">
 	
 	<div id="root">
 		
@@ -38,7 +38,7 @@
 		
 		<div id="content">
 			
-			<h1 id="iheader">Tổng quan về ứng dụng</h1>
+			<h1 id="iheader" class="animate-charcter ">Tổng quan về ứng dụng</h1>
 			
 			<div id="flex-area">
 				<div id="item-1">
@@ -56,7 +56,7 @@
 				</div>			
 				
 				
-				<img id="giay" src="img/a_0.png" alt="">
+				<img id="giay" src="img/poster.jpg" alt="">
 				
 			</div>
 			
@@ -71,11 +71,15 @@
 	
 		$('#root').hide()
 		
+		var audio = new Audio('../music/RiverFlowsinYou.mp3');
+		
+		
 		
 		document.querySelector('.giay-full').addEventListener('click', function (e) {
 			$('.giay-full').hide( "drop", { direction: "right" }, "slow" , function(e) {
 				$('#root').fadeIn('slow', function(e) {
 					loadMenu("home")
+					audio.play()
 				})
 			});
 			
